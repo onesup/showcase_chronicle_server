@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :color
       t.string :comment
       t.string :photo_file
-
+      t.integer :category_id
       t.timestamps
     end
   end

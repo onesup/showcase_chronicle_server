@@ -1,4 +1,7 @@
 ShowcaseChronicleServer::Application.routes.draw do
+  resources :categories
+
+
   get "dashboard/index"
 
   resources :products
