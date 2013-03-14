@@ -2,7 +2,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    unless params[:category_id] == nil
+      @products = Category.find(params[:category_id]).products
+    else
+      @products = Product.all
+    end
+    
 
     respond_to do |format|
       format.html # index.html.erb
