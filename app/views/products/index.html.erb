@@ -2,12 +2,11 @@
 
 <table>
   <tr>
-		<th>Brand</th>
+		<th>Category</th>
     <th>Name</th>
     <th>Code</th>
 		<th>작은그림(150x150)</th>
     <th>큰그림 Url</th>
-    <th>Color</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,12 +14,11 @@
 
 <% @products.each do |product| %>
   <tr>
-		<td><%= product.brand %></td>
+		<td><%= product.cateogy.name %></td>
     <td><%= product.name %></td>
     <td><%= product.code %></td>
 		<td><%= link_to image_tag(product.thumbnale_url), product.thumbnale_url %></td>
     <td><%= link_to product.url %></td>
-    <td><%= product.color %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
