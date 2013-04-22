@@ -1,5 +1,5 @@
 <%= simple_form_for(@product, :html => {:class => 'form-horizontal' }) do |f| %>
-
+<!--
 
 	<p id="notice"><%= notice %></p>
 
@@ -26,21 +26,19 @@
 
 
 		<ul id="thumbs" class="cf">
-	<!-- json-ajax response here, see fileupload script above, .appendTo css id:"thumbs"-->
+	
 		</ul>
-
+-->
 
 
 	<%= f.association :category, :label => '카테고리 선택', :as => :select, :prompt => "카테고리"  %>
 	<%= f.input :name %>
 	<%= f.input :code %>
 	<%= f.input :brand %>
+	<%= f.input :thumbnale_url, :label => "작은 그림(150x150)" %>
 	<%= f.input :url %>
 	<%= f.input :color %>
 	<%= f.input :comment %>
 	<%= f.submit %>
 
 <% end %>
-</br>
-<%= link_to 'Back', products_path %>
-</br>
