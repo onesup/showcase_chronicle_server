@@ -14,7 +14,11 @@
 
 <% @products.each do |product| %>
   <tr>
-		<td><%= product.category.name %></td>
+		<td>
+			<% unless product.category.nil? %>
+				<%= product.category.name %>
+			<% end %>
+		</td>
     <td><%= product.name %></td>
     <td><%= product.code %></td>
 		<td><%= link_to image_tag(product.thumbnale_url), product.thumbnale_url %></td>
